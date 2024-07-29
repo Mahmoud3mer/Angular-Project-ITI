@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface Slide {
+  image: string;
+  price: number;
+  category: string
+}
+
 @Component({
   selector: 'app-category',
   standalone: true,
@@ -9,4 +15,21 @@ import { Component } from '@angular/core';
 })
 export class CategoryComponent {
 
+  slides: Slide[] = [
+    {
+      image: '../../assets/Images/iPhone-13-Pro-1.webp',
+      price: 40000,
+      category: 'Iphone'
+    },
+    {
+      image: '../../assets/Images/Apple-iPhone-12-Pro.webp',
+      price: 30000,
+      category: 'Iphone'
+    },
+    {
+      image: '../../assets/Images/Apple-iPhone-11.webp',
+      price: 15000,
+      category: 'Iphone'
+    }
+  ]
 }
