@@ -1,30 +1,35 @@
 
 <div class="container d-flex justify-content-between mt-3 mb-3">
-    <div class="card" style="width: 18rem;">
-        <img [src]="products[0].imageUrl" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-            <h5 class="card-title">{{ products[0].name }}</h5>
-            <p class="card-text">Price: {{ products[0].price }}$</p>
-            <p class="text-success">{{ products[0].onSale == true ? 'onSale' : 'No Sale' }}</p>
-        </div>
-    </div>
+    
+    @for (product of products; track $index) {
+        <app-product-card [data]="product"></app-product-card>
 
-    <div class="card" style="width: 18rem;">
+        <!-- <div class="card" style="width: 18rem;">
+            <img [src]="product.imageUrl" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">Price: {{ product.price }}$</p>
+                @if (product.onSale == true) {
+                    <p class="text-light bg-success">OnSale</p>
+                }@else{
+                    <p class="text-light bg-success">NoSale</p>
+                }
+            </div>
+        </div> -->
+    }
+    @empty {
+        <div class="text-bg-danger text-center">
+            <h1>Empty Data!</h1>
+        </div>
+    }
+
+    <!-- <div class="card" style="width: 18rem;">
         <img [src]="products[1].imageUrl" class="card-img-top" alt="...">
         <div class="card-body text-center">
             <h5 class="card-title">{{ products[1].name }}</h5>
             <p class="card-text">Price: {{ products[1].price }}$</p>
             <p class="text-success">{{ products[1].onSale == true ? 'onSale' : 'No Sale' }}</p>
         </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-        <img [src]="products[2].imageUrl" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-            <h5 class="card-title">{{ products[2].name }}</h5>
-            <p class="card-text">Price: {{ products[2].price }}$</p>
-            <p class="text-success">{{ products[2].onSale == true ? 'onSale' : 'No Sale' }}</p>
-        </div>
-    </div>
+    </div> -->
 
 </div>

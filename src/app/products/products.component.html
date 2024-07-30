@@ -1,0 +1,5 @@
+<div class="container d-flex justify-content-between align-content-center mt-3 mb-3 flex-wrap gy-1 gx-3">
+    @for (product of products; track $index) {
+        <app-product-card [data] = "product" ></app-product-card>
+    }
+</div>

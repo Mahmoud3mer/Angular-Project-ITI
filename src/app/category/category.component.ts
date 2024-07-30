@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Slide {
-  image: string;
-  price: number;
-  category: string
-}
+import { Slide } from './slide';
 
 @Component({
   selector: 'app-category',
