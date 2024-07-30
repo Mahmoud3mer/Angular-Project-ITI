@@ -1,0 +1,12 @@
+<div class="card mb-5" style="width: 18rem;">
+    <img [src]="data.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body text-center position-relative">
+        <h5 class="card-title">{{ data.name }}</h5>
+        <p class="card-text">Price: {{ data.price }}$</p>
+        @if (data.onSale == true) {
+            <p class="text-light bg-warning position-absolute end-0 top-0 px-2">OnSale</p>
+        }@else{
+            <p class="text-light bg-warning position-absolute end-0 top-0 px-2">NoSale</p>
+        }
+    </div>
+</div>

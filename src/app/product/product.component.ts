@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-
-interface Product {
-  name: string;
-  price: number;
-  imageUrl: string;
-  onSale: boolean;
-}
+import { Product } from './product';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
   @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [ProductCardComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
+
 export class ProductComponent {
   products: Product[] = [
     {

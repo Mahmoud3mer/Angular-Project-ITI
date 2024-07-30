@@ -1,13 +1,9 @@
-<app-home></app-home>
+<app-navbar></app-navbar>
 
-<!-- binding -->
-<!-- <div class="container">
-    <input [value]="userName" (keyup.shift.x)="changeName($event)" class= "form-control" type="text" placeholder="Default input" aria-label="default input example">
-    <input [(ngModel)]="userName" class= "form-control" type="text" placeholder="Default input" aria-label="default input example">
-    <div class="text-center">
-        <h1 [style.background]="'red'">Hello my name is {{userName}}</h1>
-    </div>
-    <img src="{{imgURL}}" alt="">
-    <img [src]="imgURL" alt="">
-    <button type="button" class="btn btn-primary">Primary</button>
-</div> -->
+<!-- <app-home></app-home> -->
+<!-- routing -->
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
